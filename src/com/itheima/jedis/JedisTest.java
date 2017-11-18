@@ -42,7 +42,9 @@ public class JedisTest {
 		// 3.操作redis数据库
 		String returnStr = jedis.set("xxx", "yyy");
 		System.out.println("jedis设置值后的返回值为：" + returnStr);
-		jedis.get("xxx");
+		String xxx = jedis.get("xxx");
+		System.out.println(xxx);
+		
 		// 4.关闭资源，
 		jedis.close();
 		// 在实际开发中，本次用完不会关闭pool，因为其它程序还会用
